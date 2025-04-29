@@ -1,0 +1,33 @@
+def taschenrechner():
+    print("Einfacher Taschenrechner")
+    print("Wähle die Operation:")
+    print("1. Addition")
+    print("2. Subtraktion")
+    print("3. Multiplikation")
+    print("4. Division")
+
+    auswahl = input("Gib 1, 2, 3 oder 4 ein: ")
+
+    try:
+        zahl1 = float(input("Gib die erste Zahl ein: "))
+        zahl2 = float(input("Gib die zweite Zahl ein: "))
+    except ValueError:
+        print("Ungültige Zahleneingabe!")
+        return
+
+    if auswahl == '1':
+        print("Ergebnis:", zahl1 + zahl2)
+    elif auswahl == '2':
+        print("Ergebnis:", zahl1 - zahl2)
+    elif auswahl == '3':
+        print("Ergebnis:", zahl1 * zahl2)
+    elif auswahl == '4':
+        if zahl2 != 0:
+            print("Ergebnis:", zahl1 / zahl2)
+        else:
+            print("Fehler: Division durch Null.")
+    else:
+        print("Ungültige Auswahl.")
+
+# Start
+taschenrechner()
